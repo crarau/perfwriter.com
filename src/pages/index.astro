@@ -1,0 +1,196 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: '扩大您工厂的全球影响力',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: '立即开始',
+        href: '#',
+        icon: 'tabler:rocket',
+      },
+      { text: '了解更多', href: '#features' },
+    ]}
+    image={{ src: '~/assets/images/global-expansion.png', alt: '全球工厂扩张' }}
+  >
+    <Fragment slot="title">
+      轻松将您的工厂业务拓展至<span class="text-accent dark:text-white highlight">全球市场</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      只需几分钟，即可为印度尼西亚、美国、法国、英国和马来西亚创建定制网站，包括本地化定价、设计和策略。
+    </Fragment>
+  </Hero>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="核心功能"
+    title="我们的软件为您提供的优势"
+    subtitle="我们强大的工具使中国工厂能够快速启动针对不同市场定制的网站，具备文化适应性、动态定价和与营销机构无缝集成的特点。"
+    items={[
+      {
+        title: '本地化网站创建',
+        description: '使用可定制的模板构建适应不同文化和市场偏好的网站，匹配每个地区的设计美学。',
+        icon: 'tabler:world',
+      },
+      {
+        title: '动态定价模型',
+        description: '根据商品成本为每个国家调整产品定价，确保在每个市场都具有竞争力。',
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: '营销机构集成',
+        description: '自动与各地区顶级营销机构连接。在机构帮助推动流量和销售的同时，您还可以赚取联盟佣金。',
+        icon: 'tabler:affiliate',
+      },
+      {
+        title: '网站风格A/B测试',
+        description: '测试不同的网站风格，找出每个市场最有效的设计，确保最大程度的用户参与度。',
+        icon: 'tabler:test-pipe',
+      },
+    ]}
+  />
+  
+  <!-- Content Widget **************** -->
+
+  <Content
+    tagline="目标市场"
+    title="扩大您的影响力"
+    items={[
+      {
+        title: '印度尼西亚',
+        description: '设计反映当地文化的网站，并制定适合其经济的定价策略。',
+      },
+      {
+        title: '美国',
+        description: '现代、简洁的网站设计，为精通技术的受众提供具有竞争力的价格。',
+      },
+      {
+        title: '法国',
+        description: '优雅、极简的设计吸引法国消费者，并提供本地化定价。',
+      },
+      {
+        title: '英国',
+        description: '平衡传统和现代的网站设计，采用英国特定的定价策略。',
+      },
+      {
+        title: '马来西亚',
+        description: '适应当地的设计，重点关注经济实惠性和当地市场趋势。',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/world-map.png',
+      alt: '目标市场世界地图',
+    }}
+  >
+    <Fragment slot="content">
+      通过量身定制的方法触及多元化市场
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="使用流程"
+    items={[
+      {
+        title: '步骤1: <span class="font-medium">选择市场</span>',
+        description: '选择您的目标市场（如印度尼西亚、美国、法国等）。',
+        icon: 'tabler:map-2',
+      },
+      {
+        title: '步骤2: <span class="font-medium">上传产品</span>',
+        description: '将您的产品目录上传到我们的平台。',
+        icon: 'tabler:upload',
+      },
+      {
+        title: '步骤3: <span class="font-medium">选择模板</span>',
+        description: '从一系列符合文化特色的网站模板中进行选择。',
+        icon: 'tabler:palette',
+      },
+      {
+        title: '步骤4: <span class="font-medium">设置价格</span>',
+        description: '根据您的商品成本自动设置定价策略。',
+        icon: 'tabler:currency-yuan',
+      },
+      {
+        title: '步骤5: <span class="font-medium">启动</span>',
+        description: '启动您的网站，并与当地营销机构连接以获得流量。',
+        icon: 'tabler:rocket',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/process-flowchart.png',
+      alt: '使用流程图',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="常见问题"
+    subtitle="关于我们的全球扩张软件，您可以在这里找到常见问题的快速答案。"
+    tagline="常见问题解答"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '联盟计划如何运作？',
+        description: '我们的软件会自动将您与每个地区的顶级营销机构连接。当这些机构在各个市场推动销售时，您通过我们的联盟计划赚取佣金，创造双赢的增长局面。',
+      },
+      {
+        title: '我可以自定义网站模板吗？',
+        description: '是的，我们的模板完全可以自定义。您可以调整颜色、布局和内容以匹配您的品牌标识，同时保持对每个目标市场的文化相关性。',
+      },
+      {
+        title: '我可以多久更新一次价格？',
+        description: '您可以根据需要随时更新价格。我们的动态定价模型允许您根据市场条件、汇率和商品成本调整价格，以在每个市场保持竞争力。',
+      },
+      {
+        title: '使用平台是否需要技术知识？',
+        description: '不需要，我们的平台设计得非常用户友好，不需要技术专业知识。但是，如果您在任何阶段需要帮助，我们都会提供支持和指导。',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: '立即开始',
+        href: '#',
+        icon: 'tabler:rocket',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      准备好扩大您工厂的全球影响力了吗？
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      加入已经在使用我们平台的数百家中国工厂，开拓新市场，提升国际销售额。
+    </Fragment>
+  </CallToAction>
+</Layout>
