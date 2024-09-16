@@ -7,7 +7,7 @@ import Content from '~/components/widgets/Content.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import Pricing from '~/components/widgets/Pricing.astro';
+import WaitingList from '~/components/widgets/WaitingList.astro';
 
 const metadata = {
   title: 'AI Performance Review Assistant',
@@ -19,12 +19,6 @@ const metadata = {
 
   <Hero
     actions={[
-      {
-        variant: 'primary',
-        text: 'Get Started',
-        href: '#',
-        icon: 'tabler:rocket',
-      },
       { text: 'Learn More', href: '#features' },
     ]}
     image={{ src: '~/assets/images/ai-review.png', alt: 'AI Performance Review' }}
@@ -37,6 +31,11 @@ const metadata = {
       Our AI Performance Review Assistant analyzes your GitHub contributions to provide comprehensive insights, helping you prepare for your quarterly, bi-annual, and annual reviews.
     </Fragment>
   </Hero>
+
+  <WaitingList
+  title="Join Our Waiting List"
+  subtitle="Be among the first to experience our AI Performance Review Assistant"
+/>
 
   <!-- Features Widget *************** -->
 
@@ -147,93 +146,6 @@ const metadata = {
     }}
   />
 
-  <Pricing
-    title="Hackathon Special: AI Performance Review Assistant"
-    subtitle="Because your code deserves a standing ovation, not just a code review"
-    prices={[
-      {
-        title: `The "I'm Just Here for the Free Pizza" Plan`,
-        subtitle: 'Perfect for the curious coder',
-        price: 1,
-        period: 'for the first year',
-        items: [
-          {
-            description: 'AI-powered excuses for missed deadlines',
-          },
-          {
-            description: 'Automatic coffee-to-code converter',
-          },
-          {
-            description: 'Bug-to-feature transmutation algorithm',
-          },
-          {
-            description: 'Virtual high-fives for every commit',
-          },
-        ],
-        callToAction: {
-          text: 'Start Your Caffeinated Journey',
-          href: '#',
-        },
-        hasRibbon: true,
-        ribbonTitle: 'Best Value',
-      },
-      {
-        title: 'The "AI Performance Guru" Plan',
-        subtitle: 'For developers who want to shine in their reviews',
-        price: 50,
-        period: 'per year',
-        items: [
-          {
-            description: 'All features from the Pizza Plan',
-          },
-          {
-            description: 'Advanced contribution analysis across multiple repos',
-          },
-          {
-            description: 'AI-generated performance highlights and achievements',
-          },
-          {
-            description: 'Personalized skill growth recommendations',
-          },
-          {
-            description: 'Integration with popular project management tools',
-          },
-        ],
-        callToAction: {
-          text: 'Upgrade to Guru',
-          href: '#',
-        },
-      },
-      {
-        title: 'The "Eternal Code Sage" Lifetime Deal',
-        subtitle: 'For the developer who plans to live forever (or at least code that long)',
-        price: 100,
-        period: 'once in a lifetime',
-        items: [
-          {
-            description: 'All features from the Guru Plan',
-          },
-          {
-            description: 'Lifetime access to future AI overlords (err... updates)',
-          },
-          {
-            description: 'Time-travel debugging (results may vary in this timeline)',
-          },
-          {
-            description: 'Quantum entanglement with your GitHub account',
-          },
-          {
-            description: 'AI-powered career path prediction (crystal ball included)',
-          },
-        ],
-        callToAction: {
-          text: 'Ascend to Coding Nirvana',
-          href: '#',
-        },
-      },
-    ]}
-  />
-
   <!-- FAQs Widget ******************* -->
 
   <FAQs
@@ -267,7 +179,7 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get Started',
+        text: 'Join the Waiting List',
         href: '#',
         icon: 'tabler:rocket',
       },
@@ -281,4 +193,6 @@ const metadata = {
       Join the hundreds of developers already using our AI Performance Review Assistant to showcase their contributions and accelerate their careers.
     </Fragment>
   </CallToAction>
+
+
 </Layout>
